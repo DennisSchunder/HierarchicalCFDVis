@@ -1,8 +1,8 @@
-#HierarchicalCFDVis
+# HierarchicalCFDVis
 
 A simple Python based flow visualizer based on hierarchical techniques, built for the analysis of time-dependent 2D CFD data.
 
-##Requirements
+## Requirements
 
 - [Python 3+](https://www.python.org/)
 - [numpy](http://www.numpy.org/)
@@ -13,3 +13,6 @@ A simple Python based flow visualizer based on hierarchical techniques, built fo
 - [pyqtgraph](http://www.pyqtgraph.org/)
 - [pyopengl 3.x](http://pyopengl.sourceforge.net/)
 
+## Usage
+
+To use the program, execute the file `Visualizer.py` using python.

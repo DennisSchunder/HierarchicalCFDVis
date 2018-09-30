@@ -696,7 +696,7 @@ class GUI:
 
 
     def changeHierDepth(self, newDepth):
-        if newDepth == self.hierDepth:
+        if newDepth == self.hierDepth or self.seedAmt is None:
             return
 
         oldIndex = self.hierDepth + self.seedAmt

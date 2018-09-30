@@ -13,3 +13,6 @@ A simple Python based flow visualizer based on hierarchical techniques, built fo
 - [pyqtgraph](http://www.pyqtgraph.org/)
 - [pyopengl 3.x](http://pyopengl.sourceforge.net/)
 
+## Usage
+
+To use the program, execute the file `Visualizer.py` using python.

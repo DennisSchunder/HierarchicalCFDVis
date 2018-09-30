@@ -193,7 +193,7 @@ class OctTree(object):
         avgVel = self.avg[1]
         avgNorm = np.linalg.norm(avgVel)
 
-        similarities = np.empty(self.getSize(), dtype='uint32, f8')
+        similarities = np.zeros(self.getSize(), dtype='uint32, f8')
 
         i = 0
 
@@ -233,7 +233,7 @@ class OctTree(object):
             cosSim[cosSim < -1] = -1
             cosSim[cosSim > 1] = 1
 
-            similarity = np.divide(cosSim+1, 2)
+            similarity = np.divide(cosSim + 1, 2)
 
             #dist = np.divide(np.arccos(cosSim), np.pi) # Angular distance
             #similarity = np.subtract(1, dist)
@@ -261,7 +261,8 @@ class OctTree(object):
 
         self.similarity = similarities[np.argsort(similarities['f1'])]
 
-        self.simRange = (self.similarity['f1'][0], self.similarity['f1'][-1])
+
+        self.simRange = (np.abs(self.similarity['f1'][0]), self.similarity['f1'][-1])
 
         # All points were similar enough
         return True
